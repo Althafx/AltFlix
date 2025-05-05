@@ -2,7 +2,7 @@
     padding: 2rem 0;
     width: 100%;
     box-sizing: border-box;
-    background-color: #3b3b38;
+  
   }
   
   .search-form {
@@ -52,7 +52,11 @@
     .search-form {
       margin-bottom: 1rem;
     }
-  }
+
+
+
+
+
   
 
   .movie-grid {
@@ -64,4 +68,4 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-  
+}
