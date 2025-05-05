@@ -28,9 +28,26 @@ function Home({}){
 
 
 
-    const handleSearch = (e) => {
+    const handleSearch = async (e) => {
         e.preventDefault()
-        // setSearchQuery(value)
+        if(!searchQuery.trim()){
+            location.reload()
+        }
+        if(loading) return
+        setLoading(true)
+
+        try{
+            const searchResults = await searchMovies(searchQuery)
+            setMovies(searchResults)
+            setError(null)
+
+        }catch(err){
+            setError("failed to search for movies")
+        }finally{
+            setLoading(false)
+        }   
+
+
     }
 
 
